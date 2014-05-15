@@ -1,24 +1,24 @@
 {
-  "name": "generator-h5bp",
-  "version": "0.1.7",
-  "description": "HTML5 Boilerplate generator",
+  "name": "generator-h5bp-gosub",
+  "version": "0.1",
+  "description": "Gosub's HTML5 Boilerplate generator",
   "keywords": [
     "yeoman-generator",
     "html",
     "boilerplate",
     "template"
   ],
-  "homepage": "https://github.com/h5bp/generator-h5bp",
-  "bugs": "https://github.com/h5bp/generator-h5bp/issues",
+  "homepage": "https://github.com/gosub-communications/generator-h5bp-gosub",
+  "bugs": "https://github.com/gosub-communications/generator-h5bp-gosub/issues",
   "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "name": "Jonas Hartweg",
+    "email": "j.hartweg@gosub.de",
+    "url": "http://www.gosub.de"
   },
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/h5bp/generator-h5bp.git"
+    "url": "git://github.com/gosub-communications/generator-h5bp-gosub.git"
   },
   "scripts": {
     "test": "mocha"

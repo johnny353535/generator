@@ -47,4 +47,4 @@ Generator.prototype.copyFiles = function () {
 
 };
 
-Generator.name = 'HTML5 Boilerplate';
+Generator.name = 'Gosub\'s HTML5 Boilerplate';
