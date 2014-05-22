@@ -1,6 +1,5 @@
 {
-  "name": "name",
-  "version": "0.0.0",
+  "name": "gosub",
   "devDependencies": {
     "grunt": "~0.4.4",
     "grunt-contrib-clean": "^0.5.0",

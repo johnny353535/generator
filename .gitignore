@@ -4,5 +4,3 @@ test/temp
 testing
 .DS_Store
 #finalsetup
-dist
-bower_components
