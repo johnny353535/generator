@@ -53,9 +53,10 @@ module.exports = function (grunt) {
         // Compiles LESS
         less: {
             options: {
-                compress: true,
-                yuicompress: true,
-                optimization: 2
+                sourceMap: true,
+                sourceMapFilename: 'css/style.css.map', // where file is generated and located
+                sourceMapURL: 'style.css.map', // the complete url and filename put in the compiled css file
+                sourceMapRootpath: '..'
             },
             dev: {
                 files: [
@@ -63,6 +64,11 @@ module.exports = function (grunt) {
                 ]
             },
             dist: {
+                options: {
+                    compress: true,
+                    yuicompress: true,
+                    optimization: 2
+                },
                 files: [
                     { src: "less/style.less", dest: config.dist + "/css/style.css"}
                 ]
