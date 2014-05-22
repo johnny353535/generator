@@ -2,7 +2,7 @@
   "name": "gosub",
   "private": true,
   "dependencies": {
-    "bootstrap": "3.*", // Latest Bootstrap 3.x build
-    "jquery": "1.*" // Latest jQuery 1.x build
+    "bootstrap": "3.*",
+    "jquery": "1.*"
   }
 }
