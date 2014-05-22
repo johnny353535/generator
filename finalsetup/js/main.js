@@ -5,9 +5,9 @@ requirejs.config({
     }
 });
 
-//
 
 require(["plugins", "jquery"], function (undefined, $) {
 
+    // Your code here
 
 });

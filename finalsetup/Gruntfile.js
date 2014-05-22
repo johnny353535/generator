@@ -5,7 +5,13 @@ module.exports = function (grunt) {
         dist: 'dist'
     };
 
-    // Project configuration.
+
+    /**
+     *
+     * Project configuration
+     *
+     */
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -32,7 +38,7 @@ module.exports = function (grunt) {
                 livereload: true
             },
             html: {
-                files: ['*.html']
+                files: ['{,*/}*.html']
             },
             js: {
                 files: ['js/**/*.js'],
@@ -53,13 +59,11 @@ module.exports = function (grunt) {
             },
             dev: {
                 files: [
-                    // target.css file: source.less file
-                    { src: "css/style.less", dest: "less/style.css"}
+                    { src: "less/style.less", dest: "css/style.css"}
                 ]
             },
             dist: {
                 files: [
-                    // target.css file: source.less file
                     { src: "less/style.less", dest: config.dist + "/css/style.css"}
                 ]
             }
@@ -73,6 +77,7 @@ module.exports = function (grunt) {
             all: [
                 'Gruntfile.js',
                 'js/**/*.js',
+                '!bower_components/**/*.js',
                 '!js/vendor/**/*.js'
             ]
 
@@ -170,9 +175,10 @@ module.exports = function (grunt) {
                         src: [
                             '*.{ico,png,txt}',
                             '.htaccess',
-                            '{,*/}*.html',
-                            'img/{,*/}*.*',
-                            'fonts/{,*/}*.*'
+                            '{,*/}*.html', // Copy all HTML files
+                            'img/{,*/}*.*', // Copy all pictures
+                            'fonts/{,*/}*.*', // Copy all fonts
+                            'js/vendor/require.js' // Copy require.js
                         ]
                     }
                 ]
@@ -181,7 +187,13 @@ module.exports = function (grunt) {
         }
     });
 
-    // Load the plugin that provides the "less" task.
+
+    /**
+     *
+     * Load plugins
+     *
+     */
+
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
@@ -189,13 +201,19 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
-// Default task(s).
-    //grunt.registerTask('default', ['connect', 'watch']);
+
+    /**
+     *
+     * Register tasks
+     *
+     */
+
+    grunt.registerTask('default', ['dev']); // The default task just runs the dev task
     grunt.registerTask('dev', ['connect', 'watch']);
-    grunt.registerTask('build', ['clean:dist', 'copy:dist','requirejs', 'htmlmin:dist', 'less:dist', 'autoprefixer:dist', 'cssmin:dist']);
+    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'requirejs', 'htmlmin:dist', 'less:dist', 'autoprefixer:dist', 'cssmin:dist']);
 
 };
