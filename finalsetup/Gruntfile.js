@@ -72,7 +72,8 @@ module.exports = function (grunt) {
         // Checks for JS errors
         jshint: {
             options: {
-                ignores: []
+                ignores: [],
+                jshintrc: true
             },
             all: [
                 'Gruntfile.js',
