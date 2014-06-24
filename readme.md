@@ -33,4 +33,4 @@ For further information consult the [Grunt website](http://gruntjs.com/getting-s
 For further information consult the [Bower website](http://bower.io/#usage).
 
 
-Grunt plugins and Bower plugins should never be commited, which is why their directories are excluded by the `.gitignore`.
+Note: Grunt plugins and Bower plugins should never be commited, which is why their directories are excluded by the `.gitignore`.
