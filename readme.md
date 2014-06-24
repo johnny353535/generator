@@ -9,7 +9,6 @@ Scaffolds out a [gosub](http://gosub.de/)-flavored [HTML5 Boilerplate](http://ht
 - Run it with [yo](https://github.com/yeoman/yo): `yo h5bp-gosub`
 
 
-
 ## Components
 
 ### Grunt
@@ -23,6 +22,14 @@ Scaffolds out a [gosub](http://gosub.de/)-flavored [HTML5 Boilerplate](http://ht
 
 For further information consult the [Grunt website](http://gruntjs.com/getting-started).
 
+Note: Grunt plugins should never be commited to version control, which is why their directories are excluded by the `.gitignore`.
+
+
+#### LESS/CSS
+
+External CSS has to be placed in the `less/vendor` folder and should be imported in the `style.less` file via `@import (inline) "vendor/[filename].css"`.
+
+
 
 ### Bower
 
@@ -32,5 +39,4 @@ For further information consult the [Grunt website](http://gruntjs.com/getting-s
 
 For further information consult the [Bower website](http://bower.io/#usage).
 
-
-Note: Grunt plugins and Bower plugins should never be commited, which is why their directories are excluded by the `.gitignore`.
+Note: Bower packages should never be commited to version control, which is why their directories are excluded by the `.gitignore`.
