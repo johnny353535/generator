@@ -18,7 +18,7 @@ Scaffolds out a [gosub](http://gosub.de/)-flavored [HTML5 Boilerplate](http://ht
 [NPM](https://www.npmjs.org/), the Node Package Manager, is used to search, install and uninstall Grunt plugins.
 
 - Find available Grunt plugins [here](http://gruntjs.com/plugins). Plugins with the `contrib-` prefix are officially supported and should be favored over other plugins.
-- Install Grunt-plugins via `npm install [plugin name] --save-dev`. The parameter `--save-dev` tells NPM to save the plugin as a dependency of the project.
+- Install Grunt-plugins via `npm install [plugin name] --save-dev`. The optional parameter `--save-dev` tells NPM to save the plugin as a dependency of the project.
 
 For further information consult the [Grunt website](http://gruntjs.com/getting-started).
 
@@ -35,7 +35,7 @@ External CSS has to be placed in the `less/vendor` folder and should be imported
 
 [Bower](bower.io) is used to manage search, install and uninstall frameworks and libraries used in frontend development (like jQuery, modernirz, HTML5shiv etc.).
 
-- Install Bower packages via `bower install [package name]`
+- Install Bower packages via `bower install [package name] --save`. The optional parameter `--save` tells Bower to save the package as a dependency of the project.
 
 For further information consult the [Bower website](http://bower.io/#usage).
 
