@@ -34,48 +34,6 @@ Generator.prototype.copyFiles = function () {
 
         console.log(props);
 
-        /**
-         *
-         * Copy HTML5boilerplate directories+files
-         *
-         */
-
-
-        var ignores = [
-            '.git',
-            'CHANGELOG.md',
-            'CONTRIBUTING.md',
-            'LICENSE.md',
-            'README.md',
-            'crossdomain.xml',
-            'humans.txt',
-            'robots.txt',
-            'apple-touch-icon-precomposed.png',
-            'favicon.ico',
-            'tile.png',
-            'tile-wide.png',
-            'browserconfig.xml'
-        ];
-
-        // TODO Detect all files that are custom automatically from the templates/custom directory
-        var overrides = [
-            '.gitignore'
-        ]
-
-		this.directory('h5bp/css','css');
-		this.directory('h5bp/img','img');
-		this.directory('h5bp/js','js');
-
-		this.expandFiles('*', {
-			cwd: this.sourceRoot()+'/h5bp',
-			dot: true
-		}).forEach(function (el) {
-            console.log(el);
-
-			if (ignores.indexOf(el) === -1 && overrides.indexOf(el) === -1) {
-				this.copy('h5bp/'+el, el);
-			}
-		}, this);
 
         /**
          *
@@ -84,12 +42,12 @@ Generator.prototype.copyFiles = function () {
          */
 
         this.expandFiles('*', {
-            cwd: this.sourceRoot()+'/custom',
+            cwd: this.sourceRoot(),
             dot: true
         }).forEach(function (el) {
             console.log(el);
 
-                this.copy('custom/'+el, el, {
+                this.copy(el, el, {
                     forceOverwrite: true,
                     force: true
                 });

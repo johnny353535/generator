@@ -2,7 +2,8 @@ requirejs.config({
     paths: {
         plugins: 'plugins',
         jquery: '../bower_components/jquery/dist/jquery',
-        bootstrap: '../bower_components/bootstrap/dist/js/bootstrap'
+        bootstrap: '../bower_components/bootstrap/dist/js/bootstrap',
+        html5shiv: '../bower_components/html5shiv/dist/html5shiv'
     },
     packages: [
 

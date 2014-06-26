@@ -1,6 +1,6 @@
 module.exports = function (grunt) {
 
-    // Configurable paths
+    // Configure paths
     var config = {
         dist: 'dist'
     };
@@ -85,6 +85,7 @@ module.exports = function (grunt) {
                 'Gruntfile.js',
                 'js/**/*.js',
                 '!bower_components/**/*.js',
+                '!node_modules/**/*.js',
                 '!js/vendor/**/*.js'
             ]
 
@@ -109,10 +110,11 @@ module.exports = function (grunt) {
         requirejs: {
             compile: {
                 options: {
-                    name: 'main',
+                    include: 'main',
+                    name: '../bower_components/almond/almond',
                     mainConfigFile: 'js/main.js',
                     baseUrl: 'js',
-                    out: config.dist + '/js/main.js',
+                    out: config.dist + '/js/main.min.js',
                     optimize: 'uglify2',
                     generateSourceMaps: true,
                     preserveLicenseComments: false,
@@ -184,8 +186,7 @@ module.exports = function (grunt) {
                             '.htaccess',
                             '{,*/}*.html', // Copy all HTML files
                             'img/{,*/}*.*', // Copy all pictures
-                            'fonts/{,*/}*.*', // Copy all fonts
-                            'js/vendor/require.js' // Copy require.js
+                            'fonts/{,*/}*.*' // Copy all fonts
                         ]
                     }
                 ]
