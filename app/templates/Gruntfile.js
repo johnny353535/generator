@@ -54,17 +54,21 @@ module.exports = function (grunt) {
         less: {
             options: {
                 sourceMap: true,
-                sourceMapFilename: 'css/style.css.map', // where file is generated and located
-                sourceMapURL: 'style.css.map', // the complete url and filename put in the compiled css file
                 sourceMapRootpath: '..'
             },
             dev: {
+                options: {
+                    sourceMapFilename: 'css/style.css.map',
+                    sourceMapURL: 'style.css.map' // the complete url and filename put in the compiled css file
+                },
                 files: [
                     { src: "less/style.less", dest: "css/style.css"}
                 ]
             },
             dist: {
                 options: {
+                    sourceMapFilename: config.dist + '/css/style.css.map',
+                    sourceMapURL: 'style.css.map', // the complete url and filename put in the compiled css file
                     compress: true,
                     yuicompress: true,
                     optimization: 2
@@ -124,32 +128,11 @@ module.exports = function (grunt) {
             }
         },
 
-        // Compresses index.html
-        htmlmin: {
-            dist: {
-                options: {
-                    collapseBooleanAttributes: true,
-                    collapseWhitespace: true,
-                    removeAttributeQuotes: true,
-                    removeCommentsFromCDATA: true,
-                    removeEmptyAttributes: true,
-                    removeOptionalTags: true,
-                    removeRedundantAttributes: true,
-                    useShortDoctype: true
-                },
-                files: [
-                    {
-                        src: 'index.html',
-                        dest: config.dist + '/index.html'
-                    }
-                ]
-            }
-        },
-
         // Adds vendor-prefixes to style.css
         autoprefixer: {
             options: {
-                browsers: ['last 3 version']
+                browsers: ['last 3 version'],
+                map: true
             },
             dist: {
                 files: [
@@ -161,15 +144,12 @@ module.exports = function (grunt) {
             }
         },
 
-        // Compresses style.css
-        cssmin: {
+        // Process index.html for distribution
+        processhtml: {
             dist: {
-                files: [
-                    {
-                        src: config.dist + '/css/style.css',
-                        dest: config.dist + '/css/style.css'
-                    }
-                ]
+                files: {
+                    'dist/index.html': 'index.html'
+                }
             }
         },
 
@@ -215,12 +195,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-bower-requirejs');
+    grunt.loadNpmTasks('grunt-processhtml');
 
 
     /**
@@ -231,6 +210,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', ['dev']); // The default task just runs the dev task
     grunt.registerTask('dev', ['connect', 'watch']);
-    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'requirejs', 'htmlmin:dist', 'less:dist', 'autoprefixer:dist', 'cssmin:dist']);
+    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'requirejs', 'less:dist', 'autoprefixer:dist', 'processhtml:dist']);
 
 };
