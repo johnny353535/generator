@@ -17,7 +17,7 @@ Make sure that [git](http://git-scm.com/) is installed properly. To check that o
 ## Components
 
 
-- [Grunt](http://gruntjs.com/) is the tool to ...
+- [Grunt](http://gruntjs.com/) is the tool to that does the dirty work for you. Compiling LESS files, concatinating and minifying JavaScript files, error checking and much more.
 
 - [NPM](https://www.npmjs.org/), the Node Package Manager, is used to search, install and uninstall Grunt plugins.
 
@@ -53,15 +53,10 @@ Make sure that [git](http://git-scm.com/) is installed properly. To check that o
 
 ## Working with Grunt.js
 
-There are two default tasks available:
-
-- dev: ...
-- build: ...
-
-To run a task use `grunt [task name]`.
+To run a task use `grunt [task name]`. There are two default tasks available - *dev* and *build*. They will be explained in the following
 
 
-### Development
+### grunt dev: Development
 
 The task used during development is called 'dev'. Run it with `grunt dev`.
 
@@ -85,12 +80,12 @@ External CSS has to be placed in the `less/vendor` folder and should be imported
 
 
 
-### Building the project
+### grunt build: Building the project
 
 The task used to create a deployable version of the project is called 'build'. Run it with `grunt build`. It will export to the `dist` repository
 
 - JavaScript-files get concatinated and minified using [r.js](https://github.com/jrburke/r.js), creating one file that contains all the code. The require.js library is being replaced with [almond](https://github.com/jrburke/almond), a minimal module loader that only contins the code necessary in production.
-- The <script>-tag in the `index.html` is updated to include the generated `main.min.js` file.
+- The `<script>-tag in the `index.html` is updated to include the generated `main.min.js` file.
 
 
 ## Adding your own tasks
