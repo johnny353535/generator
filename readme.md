@@ -76,7 +76,7 @@ Note: Bower packages should never be commited to version control, which is why t
 Plugins that can't be found on Bower have to be added manually.
 Therefore ..
 
-###Less
+###LESS
 
 [LESS](http://lesscss.org) is blablabla
 
