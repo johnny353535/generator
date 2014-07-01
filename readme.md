@@ -91,7 +91,7 @@ To add your own tasks to Grunt you have to install the desired Grunt plugin with
 
 - Find available Grunt plugins [here](http://gruntjs.com/plugis). Plugins with the `contrib-` prefix are maintained by the Grunt team.
 - Install Grunt-plugins via `npm install [plugin name] --save-dev`. The optional parameter `--save-dev` tells NPM to save the plugin as a dependency of the project.
-- Make the plugin available in your Gruntfile via grunt.loadNpmTasks('[plugin name]')`
+- Make the plugin available in your Gruntfile via `grunt.loadNpmTasks('[plugin name]')`
 - Consult the plugin's website for usage instructions
 
 For further information consult the [Grunt website](http://gruntjs.com/getting-started).
