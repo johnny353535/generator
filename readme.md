@@ -30,33 +30,6 @@ Windows users: Download and install [git](http://git-scm.com/). To check, whethe
 - [Bower](bower.io) is used to manage search, install and uninstall frameworks and libraries used in frontend development (like jQuery, modernizr, HTML5shiv etc.).
 
 
-## File structure
-
-```
-.
-+-- bower_components/ (do not modify!)
-+-- css/
-|   style.css
-+-- dist/
-+-- fonts/
-+-- js/
-|   main.js
-|   +-- vendor
-+-- less/
-|   +-- vendor
-|   +-- style.less
-+-- node_modules/ (do not modify!)
-+-- .bowerrc
-+-- .gitignore
-+-- .htaccess
-+-- .jshintrc
-+-- 404.html
-+-- bower.json
-+-- Gruntfile.js
-+-- index.html
-+-- package.json
-```
-
 ## Working with Grunt.js
 
 To run a task use `grunt [task name]`. There are two default tasks available - *dev* and *build*. They will be explained in the following.
