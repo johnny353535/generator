@@ -78,7 +78,10 @@ Therefore ..
 
 External CSS has to be placed in the `less/vendor` folder and should be imported in the `style.less` file via `@import (inline) "vendor/[filename].css"`.
 
+##### Bootstrap
 
+[Bootstrap](http://getbootstrap.com) is blablabla
+To add components you have to blablabla
 
 ### grunt build: Building the project
 
