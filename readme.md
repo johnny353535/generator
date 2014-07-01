@@ -1,4 +1,4 @@
-# Gosub's HTML5 Boilerplate generator
+# Gosub's HTML5 Boilerplate Generator
 
 Scaffolds out a [gosub](http://gosub.de/)-flavored [HTML5 Boilerplate](http://html5boilerplate.com).
 
