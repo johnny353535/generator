@@ -12,7 +12,7 @@ Windows users: Download and install [git](http://git-scm.com/). To check, whethe
 - Install [Yeoman](http://yeoman.io) (`npm install -g yo`)
 - Install [Grunt](http://gruntjs.com) (`npm install -g grunt-cli`)
 - Install [Bower](http://bower.io/#installing-bower) (`npm install -g bower`)
-- Install the generator (`npm install -g generator-gosub`)
+- Install the generator (`npm install -g https://github.com/gosub-communications/generator-gosub/tarball/master`). Make sure that you are a verified to access the repository.
 
 ## Setting up a new project
 
