@@ -6,9 +6,7 @@ Note: Most of the actions will be performed via the console/command-line/termina
 
 ## Initial setup
 
-Windows users:
-
-Make sure that [git](http://git-scm.com/) is installed properly. To check that open a command line window and type `git`. It should show you a list of available git commands. If not, consult almighty Tom or Google.
+Windows users: Download and install [git](http://git-scm.com/). To check, whether it's installed properly open a command line window and type `git`. It should show you a list of available git commands. If not, consult Tom or Google.
 
 - Download and install [Node.js](http://nodejs.org/)
 - Install [Yeoman](http://yeoman.io) (`npm install -g yo`)
@@ -105,14 +103,13 @@ For a more comprehensive introduction to RequireJS check out the [API docs](http
 
 #### LESS
 
-[LESS](http://lesscss.org) is blablabla
-
-External CSS has to be placed in the `less/vendor` folder and should be imported in the `style.less` file via `@import (inline) "vendor/[filename].css"`. For LESS files the `(inline)` parameter can be omitted.
+CSS-libraries have to be placed in the `less/vendor` folder and should be imported in the `style.less` file via `@import (inline) "vendor/[filename].css"`. Some libraries (like Bootstrap) can also be found on Bower. These can be referenced as well (i.e. `@import (inline) "../bower_components/bootstrap/css/bootstrap.css";`).
 
 ##### Adding Bootstrap components
 
-[Bootstrap](http://getbootstrap.com) is blablabla
-To add components you have to blablabla. You can find a list of the components on the [Bootstrap website](http://getbootstrap.com/components/).
+[Bootstrap](http://getbootstrap.com) is always installed. However, to use it the required components have to be referenced in the `less/style.less`-file, so they will be compiled into CSS. The location of the components is `bower_components/bootstrap/less`. You can find a list of all components on the [Bootstrap website](http://getbootstrap.com/components/). Bootstrap variables, normalize and mixins are added as a standard feature.
+
+To use Bootstrap's variables you have to add your own `variables.less`-file and override the desired variables.
 
 
 ## Adding your own tasks
