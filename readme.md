@@ -93,7 +93,7 @@ Note: Bower packages should never be commited to version control, which is why t
 
 ##### Adding packages manually
 
-Adding a package by hand is similiar to the "old way" of adding a JavaScript library to a project. It only differs in the way it's being referenced. This isn't done with a `<script>`-tag in the `index.html`, but rather with [](http://requirejs.org).
+Adding a package by hand is similiar to the "old way" of adding a JavaScript library to a project. It only differs in the way it's being referenced. This isn't done with a `<script>`-tag in the `index.html`, but rather with [RequireJS](http://requirejs.org).
 
 - Download the package and copy it to the `js/vendor` folder.
 - Reference it in the require.js-config file, which can usually be found at `js/main.js` ([link](http://requirejs.org/docs/api.html#usage)).
