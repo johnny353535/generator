@@ -1,10 +1,9 @@
 requirejs.config({
     paths: {
-        plugins: 'plugins',
         jquery: '../bower_components/jquery/dist/jquery',
-        bootstrap: '../bower_components/bootstrap/dist/js/bootstrap',
         html5shiv: '../bower_components/html5shiv/dist/html5shiv',
-        almond: '../bower_components/almond/almond'
+        bootstrap: '../bower_components/bootstrap/dist/js/bootstrap',
+        plugins: 'plugins'
     },
     packages: [
 
@@ -12,9 +11,9 @@ requirejs.config({
 });
 
 
-require(["plugins", "jquery"], function (undefined, $) {
+require(["jquery", "html5shiv", "plugins"], function ($, undefined, undefined) {
 
     // Your code here
-    $('body').append('<span>It works!</span>')
+    $('body').append('<span>It works!</span>');
 
 });
