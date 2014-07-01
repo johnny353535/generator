@@ -11,53 +11,16 @@ util.inherits(Generator, yeoman.generators.NamedBase);
 
 Generator.prototype.copyFiles = function () {
 
-	var cb = this.async();
+    // Copy all files recursively
+    this.expandFiles('**', {
+        cwd: this.sourceRoot(),
+        dot: true
+    }).forEach(function (el) {
 
-    var prompts = [
-        {
-            name: 'projectName',
-            message: 'What is the name of your project?',
-            default: 'h5bp-gosub'
-        },
+        this.copy(el, el);
 
-        {
-            name: 'bootstrap',
-            message: 'Do you want to include Bootstrap?',
-            type: 'confirm',
-            default: false
-        }
-    ]
+    }, this);
 
-    prompts = [];
-
-	this.prompt(prompts, function (props) {
-
-        console.log(props);
-
-
-        /**
-         *
-         * Replace custom gosub files
-         *
-         */
-
-        this.expandFiles('*', {
-            cwd: this.sourceRoot(),
-            dot: true
-        }).forEach(function (el) {
-            console.log(el);
-
-                this.copy(el, el, {
-                    forceOverwrite: true,
-                    force: true
-                });
-
-        }, this);
-
-		cb();
-
-	}.bind(this));
+    console.log('Boilerplate created. Please run "npm install" and "bower install" as administrator to finish setup.');
 
 };
-
-Generator.name = 'Gosub\'s HTML5 Boilerplate';
