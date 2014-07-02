@@ -88,8 +88,3 @@ To add your own tasks to Grunt you have to install the desired Grunt plugin with
 For further information consult the [Grunt website](http://gruntjs.com/getting-started).
 
 Note: Grunt plugins should never be committed to version control, which is why their directories are excluded by the `.gitignore`.
-
-
-## Updating generator-gosub
-
-To get the newest version of the generator you have to blablabla
