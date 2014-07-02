@@ -23,7 +23,7 @@ Windows users: Download and install [git](http://git-scm.com/). To check whether
 
 ## Components
 
-- [Grunt](http://gruntjs.com/) is the tool to that does the dirty work for you. Compiling LESS files, concatenating and minifying JavaScript files, error checking and much more.
+- [Grunt](http://gruntjs.com/) is the tool that does the dirty work for you. Compiling LESS files, concatenating and minifying JavaScript files, error checking and much more.
 
 - [NPM](https://www.npmjs.org/), the Node Package Manager, is used to search, install and uninstall Grunt plugins.
 
