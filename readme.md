@@ -62,25 +62,13 @@ For further information consult the [Bower website](http://bower.io/#usage).
 
 Note: Bower packages should never be committed to version control, which is why their directories are excluded by the `.gitignore`.
 
-### Including Bower packages
+### Including  packages
 
-#### JavaScript
-
-#### LESS/CSS
-
-LESS/CSS-libraries have to be placed in the `less/vendor` folder and should be imported in the `style.less` file via `@import (inline) "vendor/[filename].css"`. Some libraries (like Bootstrap) can also be found on Bower. These can be referenced as well (i.e. `@import (inline) "../bower_components/bootstrap/css/bootstrap.css";`).
-
-### Adding packages manually
-
-Adding a package by hand is similar to the "old way" of adding a JavaScript or LESS/CSS library to a project. It only differs in the way it's being referenced. 
-
-For JavaScript libraries this isn't done with a `<script>`-tag in the `index.html`, but rather with [RequireJS](http://requirejs.org).
-
-- Download the package and copy it to the `js/vendor` folder.
-- Reference it in the require.js-config file, which can usually be found at `js/main.js` ([link](http://requirejs.org/docs/api.html#usage)).
-- To use it wrap your code in a `require`-block ([link](http://requirejs.org/docs/api.html#data-main)) or define a RequireJS/AMD-module ([link](http://requirejs.org/docs/api.html#define)).
+**JavaScript** libraries have to be added to the require.js-config file, which can usually be found at `js/main.js` ([link](http://requirejs.org/docs/api.html#usage)). To use it wrap your code in a `require`-block ([link](http://requirejs.org/docs/api.html#data-main)) or define a RequireJS/AMD-module ([link](http://requirejs.org/docs/api.html#define)). Reference either the source file in the `bower_components` directory or the `js/vendor` directory, depending on where you got it from.
 
 For a more comprehensive introduction to RequireJS check out the [API docs](http://requirejs.org/docs/api.html).
+
+**LESS/CSS** libraries should be imported in the `style.less` file via `@import (inline) "[path]/[to]/[package].css"`. Reference either the source file in the `bower_components` directory or the `less/vendor` directory, depending on where you got it from.
 
 ### Bootstrap components
 
