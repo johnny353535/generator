@@ -12,7 +12,7 @@ Windows users: Download and install [git](http://git-scm.com/). To check whether
 - Install [Yeoman](http://yeoman.io) (`npm install -g yo`)
 - Install [Grunt](http://gruntjs.com) (`npm install -g grunt-cli`)
 - Install [Bower](http://bower.io/#installing-bower) (`npm install -g bower`)
-- Install the generator (`npm install -g https://github.com/gosub-communications/generator-gosub/tarball/master`). Make sure that you are a verified to access the GitHub repository.
+- Install the generator (`npm install -g https://github.com/gosub-communications/generator-gosub/tarball/master`). Make sure that you are verified to access the GitHub repository.
 
 ## Setting up a new project
 
@@ -73,7 +73,7 @@ Note: Bower packages should never be committed to version control, which is why 
 
 For a more comprehensive introduction to RequireJS check out the [API docs](http://requirejs.org/docs/api.html).
 
-**LESS/CSS** libraries should be imported in the `style.less` file via `@import (inline) "[path]/[to]/[package].css"`. Reference either the source file in the `bower_components` directory or the `less/vendor` directory, depending on where you got it from.
+**LESS/CSS** libraries should be imported in the `style.less` file via `@import (inline) "[path]/[to]/[package].css"` (in case of LESS-files `(inline)` can be omitted). Reference either the source file in the `bower_components` directory or the `less/vendor` directory, depending on where you got it from.
 
 ### Bootstrap components
 
