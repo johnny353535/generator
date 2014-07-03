@@ -209,7 +209,7 @@ module.exports = function (grunt) {
      */
 
     grunt.registerTask('default', ['dev']); // The default task just runs the dev task
-    grunt.registerTask('dev', ['connect', 'watch']);
+    grunt.registerTask('dev', ['less:dev', 'connect', 'watch']);
     grunt.registerTask('build', ['clean:dist', 'copy:dist', 'requirejs', 'less:dist', 'autoprefixer:dist', 'processhtml:dist']);
 
 };
