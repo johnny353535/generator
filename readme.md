@@ -18,8 +18,13 @@ Windows users: Download and install [git](http://git-scm.com/). To check whether
 
 - Open a terminal window and go to the project folder you want to work in. Make sure it's empty.
 - Create a project with the help of [Yeoman](https://github.com/yeoman/yo): `yo gosub`
-- Install the required Grunt plugins (`npm install`)
-- Install the required Bower plugins (`bower install`)
+
+The generator tries to install all Grunt and Bower plugins automatically. If this is failing you have to run the following commands yourself.
+So, if an error is shown
+
+- Install the required Grunt plugins with `npm install`. If this fails run the command as an administrator.
+- Install the required Bower plugins with `bower install`
+- Run `grunt dev` to start working on the project
 
 ## Components
 
