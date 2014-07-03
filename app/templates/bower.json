@@ -4,8 +4,8 @@
   "dependencies": {
     "bootstrap": "3.*",
     "jquery": "1.*",
-    "html5shiv": "3.7.*",
     "almond": "0.2.*",
-    "requirejs": "2.1.*"
+    "requirejs": "2.1.*",
+    "respond": "~1.4.2"
   }
 }

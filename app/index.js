@@ -70,6 +70,7 @@ Generator.prototype.copyFiles = function () {
     }, this);
 
     this.mkdir('fonts');
+    this.mkdir('img');
 
 };
 
