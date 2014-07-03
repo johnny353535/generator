@@ -75,6 +75,45 @@ Generator.prototype.copyFiles = function () {
 
 Generator.prototype.install = function () {
 
+    console.log('Installing npm and bower packages')
+
+    // Install npm packages
+    this.spawnCommand('npm', ['install'])
+        .on('exit', function (err) {
+            if (err) {
+                this.log.error('npm package installation failed. Please run \'npm install\' and \'bower install\'. Error: ' + err);
+            } else {
+                // Install bower packages
+                this.spawnCommand('bower', ['install'])
+                    .on('exit', function (err) {
+                        if (err) {
+                            this.log.error('bower package installation failed. Please run \'bower install\'. Error: ' + err);
+                        } else {
+                            this.spawnCommand('grunt', ['less:dev'])
+                                .on('exit', function (err) {
+                                    if (err) {
+                                        // Done
+                                    } else {
+                                        this.spawnCommand('grunt', ['dev'])
+                                            .on('exit', function (err) {
+                                                if (err) {
+                                                    // Done
+                                                } else {
+
+                                                }
+
+                                            }.bind(this));
+                                    }
+
+                                }.bind(this));
+                        }
+
+                    }.bind(this));
+            }
+
+        }.bind(this));
+
+
     /*        this.spawnCommand('bower', ['install'], function () {
      console.log('done');
      });*/
