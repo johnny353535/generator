@@ -6,7 +6,7 @@ Note: Most of the actions will be performed via the console/command-line/termina
 
 ## Initial setup
 
-Windows users: Download and install [git](http://git-scm.com/). To check whether it's installed properly open a command line window and type `git`. It should show you a list of available git commands. If not, consult Tom or Google.
+Windows users: Download and install [git](http://git-scm.com/). Pick "Use Git from the Windows Command Prompt" during install! To check whether it's installed properly open a command line window and type `git`.
 
 - Download and install [Node.js](http://nodejs.org/)
 - Install [Yeoman](http://yeoman.io) (`npm install -g yo`)
