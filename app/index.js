@@ -45,6 +45,11 @@ Generator.prototype.prompting = function () {
                     name: 'Backbone.js',
                     value: 'backbone',
                     checked: false
+                },
+                {
+                    name: 'jQuery.lazyload',
+                    value: 'jquery.lazyload',
+                    checked: false
                 }
             ]
         }
