@@ -1,17 +1,17 @@
 {
-  "name": "generator-gosub",
+  "name": "generator",
   "version": "0.4.0-beta",
-  "description": "Gosub's HTML5 Boilerplate generator",
+  "description": "HTML5 Boilerplate generator",
   "keywords": [
     "yeoman-generator",
     "gosub"
   ],
-  "homepage": "https://github.com/gosub-communications/generator-gosub",
-  "bugs": "https://github.com/gosub-communications/generator-gosub/issues",
+  "homepage": "https://github.com/johnny353535/generator",
+  "bugs": "https://github.com/johnny353535/generator/issues",
   "author": {
     "name": "Jonas Hartweg",
-    "email": "j.hartweg@gosub.de",
-    "url": "http://www.gosub.de"
+    "email": "j.hartweg@web.de",
+    "url": "http://www.jonas-hartweg.de"
   },
   "main": "app/index.js",
   "files": [
@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/gosub-communications/generator-gosub.git"
+    "url": "git://github.com/johnny353535/generator.git"
   },
   "dependencies": {
     "yeoman-generator": "^0.14.2"
