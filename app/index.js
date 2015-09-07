@@ -15,7 +15,7 @@ util.inherits(Generator, yeoman.generators.NamedBase);
 
 Generator.prototype.initializing = function () {
 
-    console.log('----- Gosub\'s HTML5 Boilerplate Generator -----');
+    console.log('----- HTML5 Boilerplate Generator -----');
 
 }
 
