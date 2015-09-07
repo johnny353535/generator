@@ -1,6 +1,6 @@
-# Gosub's HTML5 Boilerplate Generator
+# HTML5 Boilerplate Generator
 
-Scaffolds out a [gosub](http://gosub.de/)-flavored [HTML5 Boilerplate](http://html5boilerplate.com).
+Scaffolds out a [HTML5 Boilerplate](http://html5boilerplate.com).
 
 Note: Most of the actions will be performed via the console/command-line/terminal. You should be familiar with opening the console, traversing directories and running commands. If a command is failing try to run it as an administrator. To do this on Mac start the command with `sudo`.
 
@@ -12,12 +12,12 @@ Windows users: Download and install [git](http://git-scm.com/). Pick "Use Git fr
 - Install [Yeoman](http://yeoman.io) (`npm install -g yo`)
 - Install [Grunt](http://gruntjs.com) (`npm install -g grunt-cli`)
 - Install [Bower](http://bower.io/#installing-bower) (`npm install -g bower`)
-- Install the generator (`npm install -g https://github.com/gosub-communications/generator-gosub/tarball/master`). Make sure that you are verified to access the GitHub repository.
+- Install the generator (`npm install -g https://github.com/johnny353535/generator/tarball/master`). Make sure that you are verified to access the GitHub repository.
 
 ## Setting up a new project
 
 - Open a terminal window and go to the project folder you want to work in. Make sure it's empty.
-- Create a project with the help of [Yeoman](https://github.com/yeoman/yo): `yo gosub`
+- Create a project with the help of [Yeoman](https://github.com/yeoman/yo): `yo generate`
 
 The generator tries to install all Grunt and Bower plugins automatically. If this is failing you have to run the following commands yourself.
 So, if an error is shown
